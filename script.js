@@ -1,37 +1,37 @@
 var n1 = "";
-var cadena = "";
+var string = "";
 var op = "";
 var resultado;
 
 function press(element) {
-  if (cadena == "0") {
-    cadena = "";
+  if (string == "0") {
+    string = "";
   }
-  cadena += element;
-  console.log(cadena);
-  document.getElementById("display").innerText = cadena;
+  string += element;
+  console.log(string);
+  document.getElementById("display").innerText = string;
 }
 function setOP(operation) {
-  n1 = cadena;
-  cadena = "";
+  n1 = string;
+  string = "";
   op = operation;
 }
 
 function calculate() {
   if (op == "/") {
-    resultado = n1 / cadena;
+    resultado = n1 / string;
   } else if (op == "+") {
-    resultado = n1 + cadena;
+    resultado = n1 + string;
   } else if (op == "-") {
-    resultado = n1 - cadena;
+    resultado = n1 - string;
   } else if (op == "*") {
-    resultado = n1 * cadena;
+    resultado = n1 * string;
   }
   document.getElementById("display").innerText = resultado;
 }
 
 function clr() {
-  cadena = "0";
+  string = "0";
   n1 = "";
-  document.getElementById("display").innerText = cadena;
+  document.getElementById("display").innerText = string;
 }
